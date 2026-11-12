@@ -70,7 +70,8 @@ else
 endif
 
 CONFIG_MODULE_SIG=n
-knv :=$(shell uname -r)
+KVER ?= $(shell uname -r)
+knv :=$(KVER)
 KERNELDIR :=/lib/modules/$(knv)/build
 PWD := $(shell pwd)
 RM = rm
